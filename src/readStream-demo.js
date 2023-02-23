@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const main = async () => {
+const readStreamMain = async () => {
     const readStream = fs.createReadStream('../data/mock-data.csv', {highWaterMark: 100});
 
     readStream.on('data', (data) => {
@@ -16,4 +16,4 @@ const main = async () => {
     });
 }
 
-main();
+readStreamMain();
